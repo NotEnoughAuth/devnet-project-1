@@ -7,3 +7,6 @@ def parseYaml(yamlFile):
         except yaml.YAMLError as exc:
             print(exc)
             return None
+        
+
+print(parseYaml('test.yaml'))

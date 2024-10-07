@@ -1,0 +1,23 @@
+name: Test Project
+version: 1.0
+description: This is a simple YAML test file for a project.
+
+settings:
+  debug: true
+  logging: verbose
+
+database:
+  host: localhost
+  port: 5432
+  username: admin
+  password: secret
+
+services:
+  - name: web
+    port: 8080
+  - name: api
+    port: 8081
+
+features:
+  authentication: true
+  caching: false
