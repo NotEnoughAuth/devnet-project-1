@@ -1,5 +1,6 @@
 import yaml
 import json
+import xml.etree.ElementTree as ET
 
 def parseYaml(yamlFile):
     with open(yamlFile, 'r') as stream:
@@ -9,11 +10,15 @@ def parseYaml(yamlFile):
             print(exc)
             return None
           
-def parse_json(jsonFile):
+def parseJson(jsonFile):
     with open(jsonFile) as f:
         data = json.load(f)
     return data
-        
 
-print(parseYaml('test.yaml'))
+def parseXml(xmlFile):
+    #parse an xml file to python dict
+    tree = ET.parse(xmlFile)
+    root = tree.getroot()
+    return root
+    
 
