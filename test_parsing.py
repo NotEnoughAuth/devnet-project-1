@@ -1,4 +1,4 @@
-import parse
+import parse_data as parse
 import unittest
 
 class TestParse(unittest.TestCase):
