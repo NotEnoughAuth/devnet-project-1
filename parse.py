@@ -1,4 +1,5 @@
 import yaml
+import json
 
 def parseYaml(yamlFile):
     with open(yamlFile, 'r') as stream:
@@ -7,6 +8,12 @@ def parseYaml(yamlFile):
         except yaml.YAMLError as exc:
             print(exc)
             return None
+          
+def parse_json(jsonFile):
+    with open(jsonFile) as f:
+        data = json.load(f)
+    return data
         
 
 print(parseYaml('test.yaml'))
+
